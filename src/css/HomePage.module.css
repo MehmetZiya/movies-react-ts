@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+.home {
+  margin-top: 8rem;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navigate {
+  width: 20rem;
+  height: 10rem;
+  text-align: center;
+  border: 1px solid rgb(255, 241, 0);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 9px rgb(255, 241, 0);
+  cursor: pointer;
+}
+.homePoster {
+  border-radius: 1rem;
+  height: 100%;
+  opacity: 0.5;
+}
+.navigate:hover {
+  background-color: black;
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.navigate p {
+  color: rgb(255, 241, 0);
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+}
+
+.homePageLinks {
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .navigate {
+    width: 24rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .navigate {
+    width: 32rem;
+    height: 16rem;
+  }
+  .navigate p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navigate {
+    width: 36rem;
+    height: 18rem;
+  }
+}

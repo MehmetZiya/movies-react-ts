@@ -1,0 +1,31 @@
+.cast {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.cast a{
+    text-decoration: none;
+    margin: 1rem;
+    color: rgb(255, 241, 0);
+}
+
+.cast a:hover {
+    transform: scale(1.1)
+}
+.actorImg {
+    max-width: 8rem;
+}
+.actorImg img {
+    width: 100%;
+}
+
+.actorName {
+    width: 8rem;
+    max-height: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .actorImg {
+        max-width: 10rem;
+    }
+}

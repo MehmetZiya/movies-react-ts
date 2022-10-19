@@ -1,0 +1,44 @@
+.card {
+  max-width: 9rem;
+  margin: 0.5rem 0.5rem;
+}
+.image {
+  overflow: hidden;
+  cursor: pointer;
+}
+.image img {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  width: 100%;
+}
+.image:hover img {
+  transform: scale(1.2) rotate(3deg);
+}
+.movieInfo p,
+h4 {
+  margin: 0 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+.movieInfo p {
+  color: rgb(105, 105, 105);
+  font-size: small;
+}
+.movieInfo {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 10rem;
+    margin: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    max-width: 12rem;
+    margin: 0.5rem 1.2rem;
+  }
+}
