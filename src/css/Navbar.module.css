@@ -38,10 +38,6 @@
   border-radius: 10px;
 }
 
-.navItem.active {
-  text-decoration: underline;
-}
-
 .dropstatus {
   justify-content: flex-end;
 }
