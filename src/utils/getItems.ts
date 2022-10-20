@@ -1,4 +1,9 @@
-import { Data, GenresData } from '../utils/types'
+import {
+  Data,
+  GenresData,
+  MovieByActorType,
+  MovieDetailsType,
+} from '../utils/types'
 
 const baseURL = 'https://api.themoviedb.org/3/'
 const api_key: string = 'b5cd38a2b87f343803775af240948692'
@@ -7,7 +12,7 @@ const region = 'SE'
 
 export const fetchPopularFilms = async (page: number): Promise<Data> => {
   const res = await fetch(
-    `${baseURL}movie/popular?api_key=${api_key}&language=${lang}&page=${page}&region=${region}`
+    `${baseURL}movie/popular?api_key=${api_key}&language=${lang}&page=${page}&region=${region}&adult=false`
   )
   return res.json()
 }
@@ -32,22 +37,29 @@ export const fetchGenres = async (): Promise<GenresData> => {
   return res.json()
 }
 
-export const fetchMovieDetails = async (movieId: number) => {
+export const fetchMovieDetails = async (
+  movieId: number
+): Promise<MovieDetailsType> => {
   const res = await fetch(`
         ${baseURL}movie/${movieId}?api_key=${api_key}&append_to_response=credits`)
   return res.json()
 }
 
-export const fetchMoviesByActor = async (actorId: number) => {
+export const fetchMoviesByActor = async (
+  actorId: number
+): Promise<MovieByActorType> => {
   const res = await fetch(
     `${baseURL}person/${actorId}?api_key=${api_key}&language=${lang}&append_to_response=credits`
   )
   return res.json()
 }
 
-export const fetchMoviesByGenre = async (genreId: number, page: number) => {
+export const fetchMoviesByGenre = async (
+  genreId: number,
+  page: number
+): Promise<Data> => {
   const res = await fetch(
-    `${baseURL}discover/movie?api_key=${api_key}&language=${lang}&with_genres=${genreId}&page=${page}`
+    `${baseURL}discover/movie?api_key=${api_key}&language=${lang}&with_genres=${genreId}&page=${page}&adult=false`
   )
   return res.json()
 }

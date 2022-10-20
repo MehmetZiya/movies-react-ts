@@ -10,7 +10,7 @@ type Props = {
 const NavLinks: React.FC<Props> = ({ handleLinkClick }) => {
   return (
     <>
-      <NavLink onClick={handleLinkClick} to='/home' className={classes.navItem}>
+      <NavLink onClick={handleLinkClick} to='/' className={classes.navItem}>
         Home
       </NavLink>
 
